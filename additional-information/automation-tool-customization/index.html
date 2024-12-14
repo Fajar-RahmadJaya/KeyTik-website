@@ -203,7 +203,6 @@
             
             
             
-            
                 <a href="https://x.com/Fajar_RahmadJ" aria-label="Twitter">
                     <svg aria-hidden='true' focusable='false' role='img' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 24 24' width='24' height='24' style='fill:currentColor;' class='icon'>
     <path d='M21.533,7.112c0.015,0.213 0.015,0.426 0.015,0.639c0,6.503 -4.949,13.995 -13.995,13.995c-2.786,0 -5.375,-0.807 -7.553,-2.208c0.396,0.046 0.777,0.061 1.188,0.061c2.299,0 4.416,-0.777 6.106,-2.102c-2.162,-0.045 -3.974,-1.461 -4.599,-3.411c0.305,0.046 0.61,0.076 0.929,0.076c0.442,0 0.884,-0.061 1.295,-0.167c-2.254,-0.457 -3.944,-2.437 -3.944,-4.828l-0,-0.06c0.654,0.365 1.416,0.594 2.223,0.624c-1.325,-0.883 -2.193,-2.391 -2.193,-4.097c0,-0.913 0.244,-1.751 0.67,-2.482c2.421,2.985 6.061,4.934 10.142,5.147c-0.076,-0.365 -0.122,-0.746 -0.122,-1.126c0,-2.711 2.193,-4.919 4.919,-4.919c1.416,-0 2.696,0.594 3.594,1.553c1.112,-0.213 2.178,-0.624 3.122,-1.188c-0.366,1.142 -1.142,2.102 -2.162,2.711c0.989,-0.107 1.949,-0.381 2.832,-0.761c-0.67,0.974 -1.508,1.842 -2.467,2.543Z'></path>
@@ -379,19 +378,19 @@
             <section class="toc" aria-labelledby="toc-title">
                 <h3 class="toc__title" id="toc-title">On this page</h3>
                 <nav class="toc__navigation"><nav class="toc" >
-        <ol><li><a href="#auto-clicker%3A">Auto Clicker:</a></li><li><a href="#screen-clicker%3A">Screen Clicker:</a></li><li><a href="#screen-coordinate-auto-detect-and-copy%3A">Screen Coordinate Auto Detect And Copy:</a></li><li><a href="#multiple-files-opener%3A">Multiple Files Opener:</a></li></ol>
+        <ol><li><a href="#auto-clicker">Auto Clicker</a></li><li><a href="#screen-clicker">Screen Clicker</a></li><li><a href="#screen-coordinate-auto-detect-and-copy">Screen Coordinate Auto Detect And Copy</a></li><li><a href="#multiple-files-opener">Multiple Files Opener</a></li></ol>
       </nav></nav>
             </section>
         </div>
         
         <div class="l-post__content post-content">
             <p>Automation tools come bundled as one with KeyTik download. It count as profile in text mode, so all of it can use KeyTik feature. I take it from my side project on <a href="https://github.com/Fajar-RahmadJaya/AutoHotkeyCollection">AutoHotkey Script Collection And Template</a>. I add comment on the script to make it easier to change. So if there are &quot;;&quot; on the line in script that mean after it or &quot;;&quot; right is comment and what you can change is before it or left &quot;;&quot;. Example: '''space:: ; This is comment'''. On that example 'space' is what you can change and '; this is comment' is the comment. Comment mean AutoHotkey not detect it as input which mean comment is not affecting script.</p>
-<h2 id="auto-clicker%3A" tabindex="-1">Auto Clicker: <a class="anchor" href="#auto-clicker%3A">#</a></h2>
+<h2 id="auto-clicker" tabindex="-1">Auto Clicker <a class="anchor" href="#auto-clicker">#</a></h2>
 <p>Auto Clicker default is to simulate 'left click' when holding 'e' key with 100 millisecond interval. You can adjust it to your preference  like change the 'e' key, change left click and change interval. For more guide on how to adjust or download the script, go to AutoHotkey Script Collection And Template release on <a href="https://github.com/Fajar-RahmadJaya/AutoHotkeyCollection/releases/tag/v2.2">AutoHotkey Script Collection and Template, Auto Clicker Guide</a>.</p>
 <ul>
 <li><strong>Full 'Auto Clicker' Script on KeyTik Bundled Download:</strong></li>
 </ul>
-<pre><code>ClickInterval := 100 ; Change this if you want to change the interval
+<pre class="language-html"><code class="language-html">ClickInterval := 100 ; Change this if you want to change the interval
 
 global isClicking := false
 
@@ -410,14 +409,13 @@ $e up:: ; Change this if you want to change hold 'e' for condition to do auto cl
 {
     global isClicking
     isClicking := false
-}
-</code></pre>
-<h2 id="screen-clicker%3A" tabindex="-1">Screen Clicker: <a class="anchor" href="#screen-clicker%3A">#</a></h2>
+}</code></pre>
+<h2 id="screen-clicker" tabindex="-1">Screen Clicker <a class="anchor" href="#screen-clicker">#</a></h2>
 <p>Screen clicker work with It work with simulate 'left click' on specific screen coordinate. You can change coordinate and interval to your preference. Don't worry because KeyTik also comes with tool to find screen coordinate then it will automatically copy. For more guide on how to adjust or download the script, go to AutoHotkey Script Collection And Template release on <a href="https://github.com/Fajar-RahmadJaya/AutoHotkeyCollection/releases/tag/v2.3">AutoHotkey Script Collection and Template, Screen Clicker Guide</a>.</p>
 <ul>
 <li><strong>Full 'Screen Clicker' Script on KeyTik Bundled Download</strong>:</li>
 </ul>
-<pre><code>toggle := false 
+<pre class="language-html"><code class="language-html">toggle := false 
 
 q &amp; e:: ; Change this to toggle screen clicker on or off
 { 
@@ -437,7 +435,7 @@ ClickLoop()
 global 
     coordinates := [[500, 300], [600, 400], [700, 500]] ; Change the interval to your preference
 
-    Loop coordinates.Length != 0 ? coordinates.Length : &quot;&quot;
+    Loop coordinates.Length != 0 ? coordinates.Length : ""
     {
         x := coordinates[A_Index][1] 
         y := coordinates[A_Index][2] 
@@ -450,25 +448,24 @@ global
         Sleep(interval)
     }
     return
-} 
-</code></pre>
-<h2 id="screen-coordinate-auto-detect-and-copy%3A" tabindex="-1">Screen Coordinate Auto Detect And Copy: <a class="anchor" href="#screen-coordinate-auto-detect-and-copy%3A">#</a></h2>
+} </code></pre>
+<h2 id="screen-coordinate-auto-detect-and-copy" tabindex="-1">Screen Coordinate Auto Detect And Copy <a class="anchor" href="#screen-coordinate-auto-detect-and-copy">#</a></h2>
 <p>To make screen clicker editing easier. I also include coordinate detector to KeyTik. On default, you just need to move your cursor to desired position then press 'space'. After that, it will show coordinate and automatically copy it. You can then just paste whenever you want. You can also change 'space' part to you preference. or more guide on how to adjust or download the script, go to AutoHotkey Script Collection And Template release on <a href="https://github.com/Fajar-RahmadJaya/AutoHotkeyCollection/releases/tag/v2.4">AutoHotkey Script Collection and Template, Screen Coordinate Auto Detect And Copy Guide</a>.</p>
 <ul>
 <li><strong>Full 'Screen Coordinate Auto Detect And Copy' Script on KeyTik Bundled Download</strong>:</li>
 </ul>
-<pre><code>Persistent
+<pre class="language-html"><code class="language-html">Persistent
 SetTitleMatchMode(2)
 
 Space:: ; Change this for script to take coordinate 
 {
     MouseGetPos(&amp;mouseX, &amp;mouseY)
 
-    coordFormat := &quot;[&quot; mouseX &quot;,&quot; mouseY &quot;]&quot;
+    coordFormat := "[" mouseX "," mouseY "]"
 
     A_Clipboard := coordFormat
 
-    ToolTip(&quot;The coordinate has been copied:`n&quot; coordFormat)
+    ToolTip("The coordinate has been copied:`n" coordFormat)
 
     SetTimer(RemoveToolTip,-2000)
 
@@ -480,21 +477,19 @@ RemoveToolTip()
 global 
     ToolTip()
     return
-} 
-</code></pre>
-<h2 id="multiple-files-opener%3A" tabindex="-1">Multiple Files Opener: <a class="anchor" href="#multiple-files-opener%3A">#</a></h2>
+} </code></pre>
+<h2 id="multiple-files-opener" tabindex="-1">Multiple Files Opener <a class="anchor" href="#multiple-files-opener">#</a></h2>
 <p>You can open multiple files only with one key or more. In default, it use alt + left to open some files or program. You can change files path with your files or programs path to your preference. Make sure you change files path to yours because in default it only give you path example not the actual path. For more guide on how to adjust or download the script, go to AutoHotkey Script Collection And Template release on <a href="https://github.com/Fajar-RahmadJaya/AutoHotkeyCollection/releases/tag/v2.1">AutoHotkey Script Collection and Template, Multiple Files Opener Guide</a>.</p>
 <ul>
 <li><strong>Full 'Multiple Files Opener' Script on KeyTik Bundled Download</strong>:</li>
 </ul>
-<pre><code>Alt &amp; Left::
+<pre class="language-html"><code class="language-html">Alt &amp; Left::
 {
-    Run(&quot;C:\\path\\to\\your\\file1.txt&quot;) ; Made sure to change this with your file path
-    Run(&quot;C:\\path\\to\\your\\file2.txt&quot;) ; You can also copy and paste this line for more file like this
-    Run(&quot;C:\\path\\to\\your\\file3.txt&quot;)
+    Run("C:\\path\\to\\your\\file1.txt") ; Made sure to change this with your file path
+    Run("C:\\path\\to\\your\\file2.txt") ; You can also copy and paste this line for more file like this
+    Run("C:\\path\\to\\your\\file3.txt")
 }
-return
-</code></pre>
+return</code></pre>
 <blockquote>
 <p><strong>Note</strong>:
 <br></p>
@@ -599,26 +594,6 @@ return
                 
                 <li>
                     <a
-                        href="fajar.rahmad.jaya.profile@gmail.com"
-                        
-                        
-                            target="_blank"
-                            rel="noopener"
-                        
-                    >
-                        Contact
-                        
-                            <span class="sr-only">Open in new window</span>
-                            <svg aria-hidden='true' focusable='false' role='img' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg' style='fill: currentColor' width='24' height='24' class='btn__icon'>
-    <path d='M1.111,1.907c0,1.049 0.858,1.908 1.907,1.908l14.478,-0l-16.938,16.938c-0.744,0.744 -0.744,1.945 -0,2.689c0.744,0.744 1.945,0.744 2.689,0l16.938,-16.938l0,14.478c0,1.049 0.859,1.907 1.908,1.907c1.049,-0 1.907,-0.858 1.907,-1.907l0,-19.075c0,-1.049 -0.858,-1.907 -1.907,-1.907l-19.075,0c-1.049,0 -1.907,0.858 -1.907,1.907Z'></path>
-</svg>
-
-                        
-                    </a>
-                </li>
-                
-                <li>
-                    <a
                         href="https://github.com/Fajar-RahmadJaya/KeyTik"
                         
                         
@@ -687,6 +662,38 @@ return
                         
                     >
                         PitchHut
+                        
+                            <span class="sr-only">Open in new window</span>
+                            <svg aria-hidden='true' focusable='false' role='img' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg' style='fill: currentColor' width='24' height='24' class='btn__icon'>
+    <path d='M1.111,1.907c0,1.049 0.858,1.908 1.907,1.908l14.478,-0l-16.938,16.938c-0.744,0.744 -0.744,1.945 -0,2.689c0.744,0.744 1.945,0.744 2.689,0l16.938,-16.938l0,14.478c0,1.049 0.859,1.907 1.908,1.907c1.049,-0 1.907,-0.858 1.907,-1.907l0,-19.075c0,-1.049 -0.858,-1.907 -1.907,-1.907l-19.075,0c-1.049,0 -1.907,0.858 -1.907,1.907Z'></path>
+</svg>
+
+                        
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+        
+        <div class="footer__column">
+            <h3 class="footer__title" id="footer-title-contact">
+                Contact
+            </h3>
+            <ul
+                class="footer__navigation"
+                aria-labelledby="footer-title-contact"
+            >
+                
+                <li>
+                    <a
+                        href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=fajar.rahmad.jaya.profile@gmail.com"
+                        
+                        
+                            target="_blank"
+                            rel="noopener"
+                        
+                    >
+                        Gmail
                         
                             <span class="sr-only">Open in new window</span>
                             <svg aria-hidden='true' focusable='false' role='img' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg' style='fill: currentColor' width='24' height='24' class='btn__icon'>
