@@ -397,18 +397,18 @@
 <p>The advantage of the Source Code Version is that you can review the entire code and compile it yourself, ensuring there’s nothing suspicious. This is especially useful because once a program is compiled into an executable, it’s harder to review the raw code.</p>
 <h2 id="why-the-normal-version-may-be-flagged-as-malware" tabindex="-1">Why the Normal Version May Be Flagged as Malware <a class="anchor" href="#why-the-normal-version-may-be-flagged-as-malware">#</a></h2>
 <p>Some antivirus programs may flag the normal compiled version as malware. This is because of how PyInstaller packages the code into an executable. Even though the code is clean and free from malware, PyInstaller's packaging process can trigger false positives in certain antivirus engines.</p>
-<p>For example, when I scan KeyTik v1.4 (source code version) using VirusTotal, it passes without any issues. However, the normal compiled version can be flagged as malware due to the way PyInstaller works.</p>
+<p>For example, when I scan KeyTik 5 (source code version) using VirusTotal, it passes without any issues. However, the normal compiled version can be flagged as malware due to the way PyInstaller works.</p>
 <blockquote>
 <p><strong>TIP</strong>:
 <br>
 <strong>If you're still concerned, you can download the source code version, build it yourself, and scan it again with VirusTotal. You'll likely see the same result — the executable built with PyInstaller will be flagged as malware, but it’s a false positive.</strong></p>
 </blockquote>
 <h2 id="scan-results" tabindex="-1">Scan Results <a class="anchor" href="#scan-results">#</a></h2>
-<p>Here’s the VirusTotal scan for KeyTik v1.4 (source code version):</p>
+<p>Here’s the VirusTotal scan for KeyTik v1.5.0 (source code version):</p>
 <ul>
 <li>
 <p><strong>Report Screenshot</strong>:
-<img src="/img/cover/report.png" alt="Virus Total Report v1.4"></p>
+<img src="/img/cover/report.png" alt="Virus Total Report v1.5.0"></p>
 </li>
 <li>
 <p><strong>Full scan report</strong>:</p>
