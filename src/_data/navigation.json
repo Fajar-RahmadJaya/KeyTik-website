@@ -1,0 +1,86 @@
+{
+  "header": [
+    {
+      "caption": "FAQ",
+      "url": "/faq/",
+      "external": false
+    },
+    {
+      "caption": "Changelog",
+      "url": "/changelog/",
+      "external": false
+    },
+    {
+      "caption": "Sponsor",
+      "url": "https://github.com/sponsors/Fajar-RahmadJaya",
+      "external": true
+    }
+  ],
+  "footer": [
+    {
+      "title": "Term & Policies",
+      "items": [
+        {
+          "caption": "About Me",
+          "url": "/term-policies/about-me/",
+          "external": false
+        },
+        {
+          "caption": "Term of Service",
+          "url": "/term-policies/term-of-service/",
+          "external": false
+        },
+        {
+          "caption": "Privacy Policies",
+          "url": "/term-policies/privacy-policies/",
+          "external": false
+        },
+        {
+          "caption": "User Agreement",
+          "url": "/term-policies/user-agreement/",
+          "external": false
+        },
+        {
+          "caption": "Contact",
+          "url": "/term-policies/contact/",
+          "external": false
+        }
+      ]
+    },
+    {
+      "title": "More From Us",
+      "items": [
+        {
+          "caption": "Github",
+          "url": "https://github.com/Fajar-RahmadJaya/KeyTik",
+          "external": true
+        },
+        {
+          "caption": "GitHub Sponsor",
+          "url": "https://github.com/sponsors/Fajar-RahmadJaya",
+          "external": true
+        },
+        {
+          "caption": "Source Forge",
+          "url": "https://sourceforge.net/projects/keytik/",
+          "external": true
+        },
+        {
+          "caption": "PitchHut",
+          "url": "https://www.pitchhut.com/project/keytik",
+          "external": true
+        }
+      ]
+    },
+    {
+      "title": "Social",
+      "items": [
+        {
+          "caption": "X (Formerly Twitter)",
+          "url": "https://x.com/Fajar_RahmadJ",
+          "external": true
+        }
+      ]
+    }
+  ]
+}
