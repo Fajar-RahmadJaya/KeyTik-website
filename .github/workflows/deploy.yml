@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-  pull_request:
 
 jobs:
   deploy:
@@ -27,26 +26,22 @@ jobs:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
 
+      # Optional: Remove this if not using Eleventy .cache
       - name: Persist Eleventy .cache
         uses: actions/cache@v3
         with:
           path: ./.cache
           key: ${{ runner.os }}-eleventy-fetch-cache
 
-      - run: npm install
-      - run: npm run prod
+      - name: Install Dependencies
+        run: npm install
 
-      - name: Move static files to build branch
-        run: |
-          # Move the ads.txt, sitemap.xml, and robots.txt to the build directory (or root of build branch)
-          mv ads.txt dist/
-          mv sitemap.xml dist/
-          mv robots.txt dist/
+      - name: Build Site
+        run: npm run build-ghpages
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
-        if: github.ref == 'refs/heads/main'
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          publish_branch: build
+          publish_dir: ./_site
