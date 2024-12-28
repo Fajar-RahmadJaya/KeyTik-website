@@ -34,7 +34,14 @@ jobs:
           key: ${{ runner.os }}-eleventy-fetch-cache
 
       - run: npm install
-      - run: npm run build-ghpages
+      - run: npm run prod
+
+      - name: Move static files to build branch
+        run: |
+          # Move the ads.txt, sitemap.xml, and robots.txt to the build directory (or root of build branch)
+          mv ads.txt dist/
+          mv sitemap.xml dist/
+          mv robots.txt dist/
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
@@ -42,3 +49,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
+          publish_branch: build
