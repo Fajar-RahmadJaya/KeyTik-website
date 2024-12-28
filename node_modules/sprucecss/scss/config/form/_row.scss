@@ -1,9 +1,0 @@
-@use 'sass:map';
-
-$form-row: () !default;
-$form-row: map.merge(
-  (
-    'inline-size': 20ch,
-  ),
-  $form-row
-);
