@@ -48,7 +48,7 @@ module.exports = config => {
   // Add Analytics and AdSense Code
   config.addTransform('injectAnalytics', (content, outputPath) => {
     if (outputPath && outputPath.endsWith('.html')) {
-      const analyticsCode = `
+      const analyticsAndAdsCode = `
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q5BR5PGWNZ"></script>
         <script>
@@ -56,8 +56,11 @@ module.exports = config => {
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
           gtag('config', 'G-Q5BR5PGWNZ');
-        </script>`;
-      return content.replace('</head>', `${analyticsCode}\n</head>`);
+        </script>
+        <!-- Google AdSense -->
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6996805384183695"
+          crossorigin="anonymous"></script>`;
+      return content.replace('</head>', `${analyticsAndAdsCode}\n</head>`);
     }
     return content;
   });
