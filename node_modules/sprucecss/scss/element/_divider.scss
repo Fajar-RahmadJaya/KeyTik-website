@@ -1,8 +1,0 @@
-@use '../function' as *;
-
-@mixin generate-divider {
-  hr {
-    border: 0;
-    border-block-start: 1px solid color('border');
-  }
-}
