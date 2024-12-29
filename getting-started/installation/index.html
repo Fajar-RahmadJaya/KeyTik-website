@@ -464,37 +464,37 @@
 </li>
 </ol>
 <p><strong>AutoHotkey and Interception Driver Installation Command:</strong></p>
-<pre class="language-html"><code class="language-html">:: This Is Comment.
-:: Make sure to run your Command Prompt as administrator for Interception Installation
+<pre class="language-js"><code class="language-js"><span class="token operator">:</span><span class="token operator">:</span> This Is Comment<span class="token punctuation">.</span>
+<span class="token operator">:</span><span class="token operator">:</span> Make sure to run your Command Prompt <span class="token keyword">as</span> administrator <span class="token keyword">for</span> Interception Installation
 
-:: Go To Download Directory.
-cd %USERPROFILE%\Downloads
+<span class="token operator">:</span><span class="token operator">:</span> Go To Download Directory<span class="token punctuation">.</span>
+cd <span class="token operator">%</span><span class="token constant">USERPROFILE</span><span class="token operator">%</span>\Downloads
 
-:: Create Installation Folder.
-mkdir "AutoHotkey &amp; Interception Installation"
+<span class="token operator">:</span><span class="token operator">:</span> Create Installation Folder<span class="token punctuation">.</span>
+mkdir <span class="token string">"AutoHotkey &amp; Interception Installation"</span>
 
-:: Go To Installation Folder.
-cd "%USERPROFILE%\Downloads\AutoHotkey &amp; Interception Installation"
+<span class="token operator">:</span><span class="token operator">:</span> Go To Installation Folder<span class="token punctuation">.</span>
+cd <span class="token string">"%USERPROFILE%\Downloads\AutoHotkey &amp; Interception Installation"</span>
 
-:: Check If AutoHotkey Installed, If Not, Then Download AutoHotkey Setup From GitHub Release And Run It.
-IF NOT EXIST "C:\Program Files\AutoHotkey" (curl -L https://github.com/AutoHotkey/AutoHotkey/releases/download/v2.0.18/AutoHotkey_2.0.18_setup.exe -o "%USERPROFILE%\Downloads\AutoHotkey &amp; Interception Installation\AutoHotkey_2.0.18_setup.exe" &amp;&amp; "%USERPROFILE%\Downloads\AutoHotkey &amp; Interception Installation\AutoHotkey_2.0.18_setup.exe") ELSE echo AutoHotkey is already installed.
+<span class="token operator">:</span><span class="token operator">:</span> Check If AutoHotkey Installed<span class="token punctuation">,</span> If Not<span class="token punctuation">,</span> Then Download AutoHotkey Setup From GitHub Release And Run It<span class="token punctuation">.</span>
+<span class="token constant">IF</span> <span class="token constant">NOT</span> <span class="token constant">EXIST</span> <span class="token string">"C:\Program Files\AutoHotkey"</span> <span class="token punctuation">(</span>curl <span class="token operator">-</span><span class="token constant">L</span> <span class="token literal-property property">https</span><span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>AutoHotkey<span class="token operator">/</span>AutoHotkey<span class="token operator">/</span>releases<span class="token operator">/</span>download<span class="token operator">/</span>v2<span class="token punctuation">.</span><span class="token number">0.18</span><span class="token operator">/</span>AutoHotkey_2<span class="token punctuation">.</span><span class="token number">0</span><span class="token punctuation">.</span>18_setup<span class="token punctuation">.</span>exe <span class="token operator">-</span>o <span class="token string">"%USERPROFILE%\Downloads\AutoHotkey &amp; Interception Installation\AutoHotkey_2.0.18_setup.exe"</span> <span class="token operator">&amp;&amp;</span> <span class="token string">"%USERPROFILE%\Downloads\AutoHotkey &amp; Interception Installation\AutoHotkey_2.0.18_setup.exe"</span><span class="token punctuation">)</span> <span class="token constant">ELSE</span> echo AutoHotkey is already installed<span class="token punctuation">.</span>
 
-:: Download Interception.zip From GitHub Release.
-curl -L https://github.com/oblitum/Interception/releases/download/v1.0.1/Interception.zip -o "%USERPROFILE%\Downloads\AutoHotkey &amp; Interception Installation\Interception.zip"
+<span class="token operator">:</span><span class="token operator">:</span> Download Interception<span class="token punctuation">.</span>zip From GitHub Release<span class="token punctuation">.</span>
+curl <span class="token operator">-</span><span class="token constant">L</span> <span class="token literal-property property">https</span><span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>oblitum<span class="token operator">/</span>Interception<span class="token operator">/</span>releases<span class="token operator">/</span>download<span class="token operator">/</span>v1<span class="token punctuation">.</span><span class="token number">0.1</span><span class="token operator">/</span>Interception<span class="token punctuation">.</span>zip <span class="token operator">-</span>o <span class="token string">"%USERPROFILE%\Downloads\AutoHotkey &amp; Interception Installation\Interception.zip"</span>
 
-:: Extract Interception.zip.
-powershell -Command "Expand-Archive -Path '%USERPROFILE%\Downloads\AutoHotkey &amp; Interception Installation\Interception.zip' -DestinationPath '%USERPROFILE%\Downloads\AutoHotkey &amp; Interception Installation\Interception'"
+<span class="token operator">:</span><span class="token operator">:</span> Extract Interception<span class="token punctuation">.</span>zip<span class="token punctuation">.</span>
+powershell <span class="token operator">-</span>Command <span class="token string">"Expand-Archive -Path '%USERPROFILE%\Downloads\AutoHotkey &amp; Interception Installation\Interception.zip' -DestinationPath '%USERPROFILE%\Downloads\AutoHotkey &amp; Interception Installation\Interception'"</span>
 
-:: Go To Interception Install Directory.
-cd "%USERPROFILE%\Downloads\AutoHotkey &amp; Interception Installation\Interception\Interception\command line installer"
+<span class="token operator">:</span><span class="token operator">:</span> Go To Interception Install Directory<span class="token punctuation">.</span>
+cd <span class="token string">"%USERPROFILE%\Downloads\AutoHotkey &amp; Interception Installation\Interception\Interception\command line installer"</span>
 
-:: Run Interception Installer.
-install-interception.exe
+<span class="token operator">:</span><span class="token operator">:</span> Run Interception Installer<span class="token punctuation">.</span>
+install<span class="token operator">-</span>interception<span class="token punctuation">.</span>exe
 
-:: Command To Install Interception.
-install-interception.exe /install
+<span class="token operator">:</span><span class="token operator">:</span> Command To Install Interception<span class="token punctuation">.</span>
+install<span class="token operator">-</span>interception<span class="token punctuation">.</span>exe <span class="token operator">/</span>install
 
-:: AutoHotkey And Interception Installation Done!
+<span class="token operator">:</span><span class="token operator">:</span> AutoHotkey And Interception Installation Done<span class="token operator">!</span>
 </code></pre>
 <blockquote>
 <p><strong>Important</strong>:

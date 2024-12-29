@@ -392,36 +392,36 @@
 To be more simple, We use python for the functionality (create, edit, GUI, run, exit, store, delete, run on startup and more) and use AutoHotkey as executor for each profile. So it's basically an app to create AutoHotkey script based on user input and assign functionality to it. You can see the created script on (KeyTik_internal\data\active). For example, suppose your input is like this:</p>
 <p>Example 1 (Without Shortcut):</p>
 <p align="center">
-  <img src="/img/cover/Example1.png/" alt="Input Example 1" width="400" />
+  <img src="/img/Picture/Example1.png/" alt="Input Example 1" width="400" />
 </p>
 <p>Then the created script result would look like this:</p>
-<pre class="language-html"><code class="language-html">; default
-^!p::ExitApp 
+<pre class="language-js"><code class="language-js"><span class="token punctuation">;</span> <span class="token keyword">default</span>
+<span class="token operator">^</span><span class="token operator">!</span>p<span class="token operator">:</span><span class="token operator">:</span>ExitApp 
 
-w::Up
-a::Left
-s::Down
-d::Right</code></pre>
+<span class="token literal-property property">w</span><span class="token operator">:</span><span class="token operator">:</span>Up
+<span class="token literal-property property">a</span><span class="token operator">:</span><span class="token operator">:</span>Left
+<span class="token literal-property property">s</span><span class="token operator">:</span><span class="token operator">:</span>Down
+<span class="token literal-property property">d</span><span class="token operator">:</span><span class="token operator">:</span>Right</code></pre>
 <p>Example 2 (With Shortcut):</p>
 <p align="center">
-  <img src="/img/cover/Example2.png/" alt="Input Example 2" width="400" />
+  <img src="/img/Picture/Example2.png/" alt="Input Example 2" width="400" />
 </p>
 <p>Then the created script result would look like this:</p>
-<pre class="language-html"><code class="language-html">; default
-^!p::ExitApp 
+<pre class="language-js"><code class="language-js"><span class="token punctuation">;</span> <span class="token keyword">default</span>
+<span class="token operator">^</span><span class="token operator">!</span>p<span class="token operator">:</span><span class="token operator">:</span>ExitApp 
 
-toggle := false
+<span class="token literal-property property">toggle</span> <span class="token operator">:</span><span class="token operator">=</span> <span class="token boolean">false</span>
 
-~q &amp; e::
-{
+<span class="token operator">~</span>q <span class="token operator">&amp;</span> e<span class="token operator">:</span><span class="token operator">:</span>
+<span class="token punctuation">{</span>
     global toggle
-    toggle := !toggle
-}
+    <span class="token literal-property property">toggle</span> <span class="token operator">:</span><span class="token operator">=</span> <span class="token operator">!</span>toggle
+<span class="token punctuation">}</span>
 
 #HotIf toggle
-w::Up
-a::Left
-s::Down
+<span class="token literal-property property">w</span><span class="token operator">:</span><span class="token operator">:</span>Up
+<span class="token literal-property property">a</span><span class="token operator">:</span><span class="token operator">:</span>Left
+<span class="token literal-property property">s</span><span class="token operator">:</span><span class="token operator">:</span>Down
 #HotIf</code></pre>
 <h2 id="assign-profile-on-specific-device" tabindex="-1">Assign Profile on Specific Device <a class="anchor" href="#assign-profile-on-specific-device">#</a></h2>
 <p>This feature work similar to [Remapper And Automation Tool] section with taking input from user then create AutoHotkey script from it. The difference is, KeyTik use help from AutoHotkey wrapper named <a href="https://github.com/evilC/AutoHotInterception">AutoHotkey Interception by evilC</a> to be able to assign script ot profile on specific device. AutoHotkey Interception work using <a href="https://github.com/oblitum/Interception">Interception driver by oblitum</a> so to be able to make it work you need to install Interception driver first. For how to do it, visit <a href="https://github.com/evilC/AutoHotInterception?tab=readme-ov-file#install-the-intereception-driver">AutoHotkey Interception, Install the Intereception driver</a>.</p>
@@ -429,33 +429,33 @@ s::Down
 <p>For more simple explanation, to assign your remap or script to specific device, you just need to select your device in the &quot;Select Device&quot; button.</p>
 <p>Here is the example, suppose your input is like this:</p>
 <p align="center">
-  <img src="/img/cover/Example3.png/" alt="Input Example 3" width="400" />
+  <img src="/img/Picture/Example3.png/" alt="Input Example 3" width="400" />
 </p>
 <p>Then the created script result would look like this:</p>
-<pre class="language-html"><code class="language-html">; default
-^!p::ExitApp 
+<pre class="language-js"><code class="language-js"><span class="token punctuation">;</span> <span class="token keyword">default</span>
+<span class="token operator">^</span><span class="token operator">!</span>p<span class="token operator">:</span><span class="token operator">:</span>ExitApp 
 
 #SingleInstance force
 Persistent
-#include AutoHotkey Interception\Lib\AutoHotInterception.ahk
+#include AutoHotkey Interception\Lib\AutoHotInterception<span class="token punctuation">.</span>ahk
 
-AHI := AutoHotInterception()
-id1 := AHI.GetDeviceIdFromHandle(false, "ACPI\VEN_HPQ&amp;DEV_8001")
-cm1 := AHI.CreateContextManager(id1)
+<span class="token constant">AHI</span> <span class="token operator">:</span><span class="token operator">=</span> <span class="token function">AutoHotInterception</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token literal-property property">id1</span> <span class="token operator">:</span><span class="token operator">=</span> <span class="token constant">AHI</span><span class="token punctuation">.</span><span class="token function">GetDeviceIdFromHandle</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token string">"ACPI\VEN_HPQ&amp;DEV_8001"</span><span class="token punctuation">)</span>
+<span class="token literal-property property">cm1</span> <span class="token operator">:</span><span class="token operator">=</span> <span class="token constant">AHI</span><span class="token punctuation">.</span><span class="token function">CreateContextManager</span><span class="token punctuation">(</span>id1<span class="token punctuation">)</span>
 
-#HotIf cm1.IsActive
-toggle := false
+#HotIf cm1<span class="token punctuation">.</span>IsActive
+<span class="token literal-property property">toggle</span> <span class="token operator">:</span><span class="token operator">=</span> <span class="token boolean">false</span>
 
-~q &amp; e::
-{
+<span class="token operator">~</span>q <span class="token operator">&amp;</span> e<span class="token operator">:</span><span class="token operator">:</span>
+<span class="token punctuation">{</span>
     global toggle
-    toggle := !toggle
-}
+    <span class="token literal-property property">toggle</span> <span class="token operator">:</span><span class="token operator">=</span> <span class="token operator">!</span>toggle
+<span class="token punctuation">}</span>
 
 #HotIf toggle
-w::Up
-a::Left
-s::Down
+<span class="token literal-property property">w</span><span class="token operator">:</span><span class="token operator">:</span>Up
+<span class="token literal-property property">a</span><span class="token operator">:</span><span class="token operator">:</span>Left
+<span class="token literal-property property">s</span><span class="token operator">:</span><span class="token operator">:</span>Down
 #HotIf
 
 #HotIf</code></pre>
