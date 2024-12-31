@@ -1141,7 +1141,7 @@ strong {
 @media (min-width: 48em) {
   .l-main {
     --gtc: minmax(0, 16rem) minmax(0, 1fr);
-    gap: calc(var(--spruce-container-gap) * 1.5);
+    gap: calc(var(--spruce-container-gap) * 1);
   }
 }
 @media (min-width: 64em) {
@@ -1151,7 +1151,7 @@ strong {
 }
 @media (min-width: 80em) {
   .l-main {
-    --gtc: minmax(0, 20rem) minmax(0, 1fr);
+    --gtc: minmax(0, 16rem) minmax(0, 1fr);
   }
 }
 .l-main__sidebar {
@@ -1204,7 +1204,7 @@ strong {
 }
 @media (min-width: 80em) {
   .l-post {
-    --gtc: minmax(0, 1fr) minmax(0, 15rem);
+    --gtc: minmax(0, 1fr) minmax(0, 10rem);
   }
 }
 @media (min-width: 80em) {

@@ -31,15 +31,15 @@
     
 
 
-<title>How KeyTik Works - KeyTik: The All-in-One Automation Tool</title>
-<link rel="canonical" href="https://keytik.netlify.app/additional-information/how-keytik-works/" />
+<title>Profile Backup - KeyTik: The All-in-One Automation Tool</title>
+<link rel="canonical" href="https://keytik.netlify.app/additional-information/profile-backup/" />
 
 <meta name="generator" content="Eleventy v2.0.1" />
 
 <meta property="og:site_name" content="KeyTik: The All-in-One Automation Tool" />
-<meta property="og:title" content="How KeyTik Works - KeyTik: The All-in-One Automation Tool" />
+<meta property="og:title" content="Profile Backup - KeyTik: The All-in-One Automation Tool" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://keytik.netlify.app/additional-information/how-keytik-works/" />
+<meta property="og:url" content="https://keytik.netlify.app/additional-information/profile-backup/" />
 
 
     <meta name="twitter:card" content="summary_large_image" />
@@ -50,9 +50,9 @@
 
 
 
-    <meta name="description" content="Learn how keytik work." />
-    <meta name="twitter:description" content="Learn how keytik work." />
-    <meta property="og:description" content="Learn how keytik work." />
+    <meta name="description" content="Backup Profile on cloud storage." />
+    <meta name="twitter:description" content="Backup Profile on cloud storage." />
+    <meta property="og:description" content="Backup Profile on cloud storage." />
 
 
 <link rel="icon" href="/img/favicon.svg" type="image/svg+xml" />
@@ -80,6 +80,17 @@
         
             <nav class="header__navigation">
                 <ul>
+                    
+                    <li>
+                        <a
+                            href="/"
+                            
+                            
+                        >
+                            KeyTik
+                            
+                        </a>
+                    </li>
                     
                     <li>
                         <a
@@ -220,6 +231,17 @@
                         
                         <li>
                             <a
+                                href="/"
+                                
+                                
+                            >
+                                KeyTik
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a
                                 href="/faq/"
                                 
                                 
@@ -306,9 +328,22 @@
                         
                             <li><a href="/additional-information/automation-tool-customization/" >Automation Tool Customization</a></li>
                         
-                            <li><a href="/additional-information/how-keytik-works/"  aria-current="page" data-state="active">How KeyTik Works</a></li>
+                            <li><a href="/additional-information/keytik-mechanism/" >KeyTik Mechanism</a></li>
                         
-                            <li><a href="/additional-information/tips-and-guide/" >Tips &amp; Guide</a></li>
+                    </ul>
+                </nav>
+            </div>
+        
+            <div class="sidebar-section">
+                <h3 class="sidebar-section__title">Tips &amp; Guide</h3>
+                <nav class="sidebar-section__navigation">
+                    <ul>
+                        
+                            <li><a href="/additional-information/utilize-features/" >Utilize Features</a></li>
+                        
+                            <li><a href="/additional-information/create-automation-tool/" >Create Automation Tool</a></li>
+                        
+                            <li><a href="/additional-information/profile-backup/"  aria-current="page" data-state="active">Profile Backup</a></li>
                         
                     </ul>
                 </nav>
@@ -352,12 +387,12 @@
     </li>
         <li>
             
-                <a href="/additional-information/">Additional Information</a>
+                <a href="/tips-and-guide/">Tips &amp; Guide</a>
             
         </li>
         <li>
             
-                <span aria-current="page">How KeyTik Works</span>
+                <span aria-current="page">Profile Backup</span>
             
         </li>
 </ol>
@@ -365,7 +400,7 @@
     
     
         <h1 class="post-heading__title">
-            How KeyTik Works
+            Profile Backup
         </h1>
     
     
@@ -373,88 +408,9 @@
 </div>
 
         
-        <div class="l-post__toc toc" aria-labelledby="toc-title">
-            <section class="toc" aria-labelledby="toc-title">
-                <h3 class="toc__title" id="toc-title">On this page</h3>
-                <nav class="toc__navigation"><nav class="toc" >
-        <ol><li><a href="#remapper-and-automation-tool">Remapper And Automation Tool</a></li><li><a href="#assign-profile-on-specific-device">Assign Profile on Specific Device</a></li></ol>
-      </nav></nav>
-            </section>
-        </div>
-        
         <div class="l-post__content post-content">
-            <h2 id="remapper-and-automation-tool" tabindex="-1">Remapper And Automation Tool <a class="anchor" href="#remapper-and-automation-tool">#</a></h2>
-<p>For the automation tool executor, KeyTik use AutoHotkey. AutoHotkey is a powerful scripting language to do this task. Using AutoHotkey, allow keytik to do almost all automation task while still make it lightweight. For example, one AutoHotkey script size usually below 1MB and if We make the automation tool without AutoHotkey such as using python library then the size could be more than that. Another reason We use AutoHotkey is because how it work. Because it work in a single file and have different file for each script, allow KeyTik to assign feature to it such as run on startup or multiple profile.
-To be more simple, We use python for the functionality (create, edit, GUI, run, exit, store, delete, run on startup and more) and use AutoHotkey as executor for each profile. So it's basically an app to create AutoHotkey script based on user input and assign functionality to it. You can see the created script on (KeyTik_internal\data\active). For example, suppose your input is like this:</p>
-<p>Example 1 (Without Shortcut):</p>
-<p align="center">
-  <img src="/img/Picture/Example1.png/" alt="Input Example 1" width="400" />
-</p>
-<p>Then the created script result would look like this:</p>
-<pre class="language-js"><code class="language-js"><span class="token punctuation">;</span> <span class="token keyword">default</span>
-<span class="token operator">^</span><span class="token operator">!</span>p<span class="token operator">:</span><span class="token operator">:</span>ExitApp 
-
-<span class="token literal-property property">w</span><span class="token operator">:</span><span class="token operator">:</span>Up
-<span class="token literal-property property">a</span><span class="token operator">:</span><span class="token operator">:</span>Left
-<span class="token literal-property property">s</span><span class="token operator">:</span><span class="token operator">:</span>Down
-<span class="token literal-property property">d</span><span class="token operator">:</span><span class="token operator">:</span>Right</code></pre>
-<p>Example 2 (With Shortcut):</p>
-<p align="center">
-  <img src="/img/Picture/Example2.png/" alt="Input Example 2" width="400" />
-</p>
-<p>Then the created script result would look like this:</p>
-<pre class="language-js"><code class="language-js"><span class="token punctuation">;</span> <span class="token keyword">default</span>
-<span class="token operator">^</span><span class="token operator">!</span>p<span class="token operator">:</span><span class="token operator">:</span>ExitApp 
-
-<span class="token literal-property property">toggle</span> <span class="token operator">:</span><span class="token operator">=</span> <span class="token boolean">false</span>
-
-<span class="token operator">~</span>q <span class="token operator">&amp;</span> e<span class="token operator">:</span><span class="token operator">:</span>
-<span class="token punctuation">{</span>
-    global toggle
-    <span class="token literal-property property">toggle</span> <span class="token operator">:</span><span class="token operator">=</span> <span class="token operator">!</span>toggle
-<span class="token punctuation">}</span>
-
-#HotIf toggle
-<span class="token literal-property property">w</span><span class="token operator">:</span><span class="token operator">:</span>Up
-<span class="token literal-property property">a</span><span class="token operator">:</span><span class="token operator">:</span>Left
-<span class="token literal-property property">s</span><span class="token operator">:</span><span class="token operator">:</span>Down
-#HotIf</code></pre>
-<h2 id="assign-profile-on-specific-device" tabindex="-1">Assign Profile on Specific Device <a class="anchor" href="#assign-profile-on-specific-device">#</a></h2>
-<p>This feature work similar to [Remapper And Automation Tool] section with taking input from user then create AutoHotkey script from it. The difference is, KeyTik use help from AutoHotkey wrapper named <a href="https://github.com/evilC/AutoHotInterception">AutoHotkey Interception by evilC</a> to be able to assign script ot profile on specific device. AutoHotkey Interception work using <a href="https://github.com/oblitum/Interception">Interception driver by oblitum</a> so to be able to make it work you need to install Interception driver first. For how to do it, visit <a href="https://github.com/evilC/AutoHotInterception?tab=readme-ov-file#install-the-intereception-driver">AutoHotkey Interception, Install the Intereception driver</a>.</p>
-<p>To use this feature, you just need to select your device then click on &quot;Select&quot; Button, it will automatically take the device type, VID and PID/Handle then pass it to &quot;Device ID&quot; entry. After that, you can freely add your script or keyboard remap and finish it, then it's done. After setting up your device id and remap or script, you have a profile that work on specific device. If you are unsure which one is your device ID, you can use AutoHotkey Interception built in monitor with clicking &quot;Open AHI Monitor To Test Device&quot; button and it will automatically open monitor.ahk.</p>
-<p>For more simple explanation, to assign your remap or script to specific device, you just need to select your device in the &quot;Select Device&quot; button.</p>
-<p>Here is the example, suppose your input is like this:</p>
-<p align="center">
-  <img src="/img/Picture/Example3.png/" alt="Input Example 3" width="400" />
-</p>
-<p>Then the created script result would look like this:</p>
-<pre class="language-js"><code class="language-js"><span class="token punctuation">;</span> <span class="token keyword">default</span>
-<span class="token operator">^</span><span class="token operator">!</span>p<span class="token operator">:</span><span class="token operator">:</span>ExitApp 
-
-#SingleInstance force
-Persistent
-#include AutoHotkey Interception\Lib\AutoHotInterception<span class="token punctuation">.</span>ahk
-
-<span class="token constant">AHI</span> <span class="token operator">:</span><span class="token operator">=</span> <span class="token function">AutoHotInterception</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token literal-property property">id1</span> <span class="token operator">:</span><span class="token operator">=</span> <span class="token constant">AHI</span><span class="token punctuation">.</span><span class="token function">GetDeviceIdFromHandle</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token string">"ACPI\VEN_HPQ&amp;DEV_8001"</span><span class="token punctuation">)</span>
-<span class="token literal-property property">cm1</span> <span class="token operator">:</span><span class="token operator">=</span> <span class="token constant">AHI</span><span class="token punctuation">.</span><span class="token function">CreateContextManager</span><span class="token punctuation">(</span>id1<span class="token punctuation">)</span>
-
-#HotIf cm1<span class="token punctuation">.</span>IsActive
-<span class="token literal-property property">toggle</span> <span class="token operator">:</span><span class="token operator">=</span> <span class="token boolean">false</span>
-
-<span class="token operator">~</span>q <span class="token operator">&amp;</span> e<span class="token operator">:</span><span class="token operator">:</span>
-<span class="token punctuation">{</span>
-    global toggle
-    <span class="token literal-property property">toggle</span> <span class="token operator">:</span><span class="token operator">=</span> <span class="token operator">!</span>toggle
-<span class="token punctuation">}</span>
-
-#HotIf toggle
-<span class="token literal-property property">w</span><span class="token operator">:</span><span class="token operator">:</span>Up
-<span class="token literal-property property">a</span><span class="token operator">:</span><span class="token operator">:</span>Left
-<span class="token literal-property property">s</span><span class="token operator">:</span><span class="token operator">:</span>Down
-#HotIf
-
-#HotIf</code></pre>
+            <p>You can backup KeyTik profile using cloud storage like One Drive. Profile is not big so it will not take too much space even if you use free plan on One Drive. To backup it, you just need put KeyTik entire folder on One Drive folder. That's what you can do for now.</p>
+<p>We also planning to implement feature to move where the profile will stored. This way you don't need to put entire folder to One Drive storage. Instead, you just need to setting the profile storage to One Drive folder. So, stay tuned for it!</p>
 
         </div>
     </article>
@@ -463,7 +419,7 @@ Persistent
 
 <nav class="post-navigation">
     
-        <a class="post-navigation-item post-navigation-item--prev" href="/introduction/features/">
+        <a class="post-navigation-item post-navigation-item--prev" href="/additional-information/keytik-mechanism/">
             <span class="post-navigation-item__icon">
                 <svg width='100%' height='100%' viewBox='0 0 24 24' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xml:space='preserve' xmlns:serif='http://www.serif.com/' style='fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;fill:currentColor;' class='icon'>
     <path d='M22.46,10.468l-17.204,-0l7.516,-7.517c0.601,-0.6 0.601,-1.586 0,-2.187c-0.601,-0.6 -1.571,-0.6 -2.172,0l-10.149,10.15c-0.601,0.601 -0.601,1.571 -0,2.172l10.149,10.15c0.601,0.6 1.571,0.6 2.172,-0c0.601,-0.601 0.601,-1.571 0,-2.172l-7.516,-7.516l17.204,-0c0.847,-0 1.54,-0.693 1.54,-1.54c0,-0.847 -0.693,-1.54 -1.54,-1.54Z'></path>
@@ -472,7 +428,7 @@ Persistent
             </span>
             <span class="post-navigation-item__caption">
                 Previous
-                <span class="post-navigation-item__title">Features</span>
+                <span class="post-navigation-item__title">KeyTik Mechanism</span>
             </span>
         </a>
     

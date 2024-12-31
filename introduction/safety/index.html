@@ -50,9 +50,9 @@
 
 
 
-    <meta name="description" content="Understanding KeyTik user safety." />
-    <meta name="twitter:description" content="Understanding KeyTik user safety." />
-    <meta property="og:description" content="Understanding KeyTik user safety." />
+    <meta name="description" content="KeyTik safety assurance." />
+    <meta name="twitter:description" content="KeyTik safety assurance." />
+    <meta property="og:description" content="KeyTik safety assurance." />
 
 
 <link rel="icon" href="/img/favicon.svg" type="image/svg+xml" />
@@ -80,6 +80,17 @@
         
             <nav class="header__navigation">
                 <ul>
+                    
+                    <li>
+                        <a
+                            href="/"
+                            
+                            
+                        >
+                            KeyTik
+                            
+                        </a>
+                    </li>
                     
                     <li>
                         <a
@@ -220,6 +231,17 @@
                         
                         <li>
                             <a
+                                href="/"
+                                
+                                
+                            >
+                                KeyTik
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a
                                 href="/faq/"
                                 
                                 
@@ -306,9 +328,22 @@
                         
                             <li><a href="/additional-information/automation-tool-customization/" >Automation Tool Customization</a></li>
                         
-                            <li><a href="/additional-information/how-keytik-works/" >How KeyTik Works</a></li>
+                            <li><a href="/additional-information/keytik-mechanism/" >KeyTik Mechanism</a></li>
                         
-                            <li><a href="/additional-information/tips-and-guide/" >Tips &amp; Guide</a></li>
+                    </ul>
+                </nav>
+            </div>
+        
+            <div class="sidebar-section">
+                <h3 class="sidebar-section__title">Tips &amp; Guide</h3>
+                <nav class="sidebar-section__navigation">
+                    <ul>
+                        
+                            <li><a href="/additional-information/utilize-features/" >Utilize Features</a></li>
+                        
+                            <li><a href="/additional-information/create-automation-tool/" >Create Automation Tool</a></li>
+                        
+                            <li><a href="/additional-information/profile-backup/" >Profile Backup</a></li>
                         
                     </ul>
                 </nav>
@@ -387,7 +422,7 @@
 <h2 id="is-keytik-safe-to-use%3F" tabindex="-1">Is KeyTik Safe to Use? <a class="anchor" href="#is-keytik-safe-to-use%3F">#</a></h2>
 <p>Yes, KeyTik is safe to use. We have not added any malicious code, and since KeyTik is open-source, you can check the code yourself. If you still have doubts, We encourage you to scan it using <a href="https://www.virustotal.com/gui/home/upload">VirusTotal</a>. VirusTotal is a well-known free online service that can analyzes files and URLs for viruses, malware, and other malicious content by scanning them with a wide range of antivirus engines and security tools. We scan KeyTik using VirusTotal every new version before release to ensure its safety.</p>
 <p>To put it simply, We do not intend to add any malware or collect your personal data without your permission. Our goal is to build trust with you, so you can use KeyTik without any worries. If you encounter any warning about safety such as, untrusted author or false positives, don't hesitate to tell us so we can request removal to Windows. You can do this with submitting report on <a href="https://github.com/Fajar-RahmadJaya/KeyTik/issues">KeyTik Issues page</a> or using issue template <a href="https://github.com/Fajar-RahmadJaya/KeyTik/issues/new?assignees=&amp;labels=Windows+Warning+Report&amp;projects=&amp;template=windows-warning-report.md&amp;title=Windows+Warning+Report">Windows Warning Report</a>.</p>
-<p>Another consideration is, KeyTik trusted by Softpedia. Softpedia is one of the biggest software downloader and known as the safety of it's downloadable software. KeyTik got an award from Softpedia as certified no spyware, no adware, no virusses. You can check it on Softpedia post about KeyTik <a href="https://www.softpedia.com/get/Others/Miscellaneous/KeyTik.shtml">here</a>.</p>
+<p>Another consideration is, KeyTik trusted by Softpedia. Softpedia is one of the biggest software downloader and known as the safety of it's downloadable software. KeyTik got an award from Softpedia as certified no spyware, no adware, no viruses. You can check it on Softpedia post about KeyTik <a href="https://www.softpedia.com/get/Others/Miscellaneous/KeyTik.shtml">here</a>.</p>
 <p>Here is the award description, taken from Softpedia:</p>
 <blockquote>
 <p><strong>This product was last tested in the Softpedia Labs on 29th of November 2024 by Alexandra Sava.</strong></p>
@@ -408,7 +443,7 @@
 <li><strong>Normal Version</strong>: This is the compiled, executable version of KeyTik that We build using the same code in the source code version. You don’t need to compile it yourself, and it works out of the box. We use <a href="https://github.com/pyinstaller/pyinstaller">PyInstaller</a> to build it into executable.</li>
 <li><strong>Source Code Version</strong>: This is the raw, uncompiled code. You can review the code yourself to ensure it’s safety. If you’re comfortable with compiling the code or installing the required Python libraries to run KeyTik and want to compile it yourself, you can use this download version. We also provide a <a href="https://github.com/Fajar-RahmadJaya/KeyTik/blob/main/Build%20Guide.txt">build guide</a> with download to guide you for how to compile or build it.</li>
 </ol>
-<p>The source code version purpose is to ensure user safety and being transparent to user. While the normal version is to provide user with KeyTik executeable for ease of use.</p>
+<p>The source code version purpose is to ensure user safety and being transparent to user. While the normal version is to provide user with KeyTik executable for ease of use.</p>
 <h2 id="why-are-we-include-source-code-version%3F" tabindex="-1">Why are We Include Source Code Version? <a class="anchor" href="#why-are-we-include-source-code-version%3F">#</a></h2>
 <p>Some antivirus may flag compiled program or software using Pyinstaller as malware. This is because of how PyInstaller packages the code into an executable. Even though the code is clean and free from malware, PyInstaller's packaging process can trigger false positives in certain antivirus engines.</p>
 <p>For example, when We scan KeyTik source code version using VirusTotal, it passes without any issues. However, the compiled version can be flagged as malware due to the way PyInstaller works.</p>
@@ -431,9 +466,9 @@
 <hr>
 <h2 id="summary" tabindex="-1">Summary <a class="anchor" href="#summary">#</a></h2>
 <ul>
-<li><strong>KeyTik is safe to use</strong>: It's open-source, and you can verify the code yourself. KeyTik also got a reward by Softpedia as certified no spyware, no adware, no virusses.</li>
+<li><strong>KeyTik is safe to use</strong>: It's open-source, and you can verify the code yourself. KeyTik also got a reward by Softpedia as certified no spyware, no adware, no viruses.</li>
 <li><strong>Two download options</strong>: A normal version (compiled) and a source code version (raw code) to assure safety and be transparent.</li>
-<li><strong>False positives on compiled or normal version</strong>: If you find a warning or malware detection, don't worry it's a false porsitive. Executables built with PyInstaller may be flagged as malware, while the source code version is not flagged.</li>
+<li><strong>False positives on compiled or normal version</strong>: If you find a warning or malware detection, don't worry it's a false positive. Executables built with PyInstaller may be flagged as malware, while the source code version is not flagged.</li>
 </ul>
 <p>Your security and trust are our top priorities, and We are committed to keep KeyTik safe for all users. If you have any further concerns, don’t hesitate to reach out!</p>
 
